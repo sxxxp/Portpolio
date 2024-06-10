@@ -1,0 +1,168 @@
+@import "./Mixin";
+
+* {
+  margin: 0;
+  text-align: center;
+}
+.App {
+  background-color: transparent;
+}
+.nav {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+ul {
+  list-style: none;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+}
+
+@include desktop {
+  $fontsize: 28px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .contact-img {
+    size: $fontsize * 6;
+  }
+
+  .footer {
+  }
+}
+
+// 노트북에서 데스크탑
+@include laptopToDesktop {
+  $fontsize: 28px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .contact-img {
+    width: $fontsize * 3;
+    height: $fontsize * 3;
+  }
+  .nav {
+    width: $fontsize * 6;
+    bottom: $fontsize;
+    right: $fontsize;
+  }
+  li {
+    margin: $fontsize/2;
+  }
+
+  .footer {
+  }
+}
+
+// 노트북
+@include laptop {
+  $fontsize: 24px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .nav {
+    width: $fontsize * 6;
+    bottom: $fontsize;
+    right: $fontsize;
+  }
+  li {
+    margin: $fontsize/2;
+  }
+
+  .footer {
+  }
+}
+
+// 태블릿에서 노트북
+@include tabletToLaptop {
+  $fontsize: 24px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .nav {
+    width: $fontsize * 6;
+    bottom: $fontsize;
+    right: $fontsize;
+  }
+  li {
+    margin: $fontsize/2;
+  }
+
+  .footer {
+  }
+}
+
+// 태블릿
+@include tablet {
+  $fontsize: 24px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .nav {
+    width: $fontsize * 6;
+    bottom: $fontsize;
+    right: $fontsize;
+  }
+  li {
+    margin: $fontsize/2;
+  }
+
+  .footer {
+  }
+}
+
+@include mobileToTablet {
+  $fontsize: 20px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .nav {
+    width: $fontsize * 6;
+    bottom: $fontsize;
+    right: $fontsize;
+  }
+  li {
+    margin: $fontsize/2;
+  }
+
+  .footer {
+  }
+}
+
+// 모바일
+@include mobile {
+  $fontsize: 20px;
+  .visual {
+  }
+
+  .section {
+    font-size: $fontsize;
+  }
+  .nav {
+    right: $fontsize;
+    bottom: $fontsize;
+  }
+
+  .footer {
+  }
+}
